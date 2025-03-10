@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    
+    /* body {
+    font-family: Arial, sans-serif;
+    background: white;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 10px; */
+    /* background: #28a745; */
+    /* background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #218838;
+} */
+ /* 🌟 Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d78391, #ff7eb3, #e97f90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 🌈 Glassmorphism Container */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Form Styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* 📌 Input Fields */
+.form-container input {
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Placeholder Styling */
+.form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 🔍 Focus Effect */
+.form-container input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* 🎯 Button Styling */
+.form-container button {
+    padding: 12px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.form-container button:hover {
+    background: linear-gradient(135deg, #e651aa, #ff4da6);
+    transform: scale(1.05);
+}
+
+/* 🌎 Links */
+p {
+    color: white;
+    margin-top: 15px;
+}
+
+a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffeb99;
+}
+
+/* 📱 Responsive */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const userData = JSON.parse(localStorage.getItem(email));
+
+            if (userData && userData.password === password) {
+                alert('Login successful! Redirecting...');
+                window.location.href = 'resume.html';
+            } else {
+                alert('Invalid email or password.');
+            }
+        }
+    </script>
+</body>
+</html>
